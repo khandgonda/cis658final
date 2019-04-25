@@ -14,6 +14,20 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
+//= require jquery_ujs
 //= require popper
 //= require bootstrap-sprockets
 //= require social-share-button
+//= require_tree
+
+$(document).ready(function() {
+  $(".destroy").on("click", function() {
+    if (confirm("Are you sure Bro?")) {
+      $.ajax({
+        url: "/posts/" + this.parentElement.id,
+        type: "DELETE",
+        success: function(r) {}
+      });
+    }
+  });
+});

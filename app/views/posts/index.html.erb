@@ -52,6 +52,7 @@ div > a:link, div > a:visited,div > a:hover, div > a:active   {
 
 </style>
 
+
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
@@ -67,7 +68,7 @@ div > a:link, div > a:visited,div > a:hover, div > a:active   {
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr>
+      <tr id= '<%= post.id %>' >
         <td><%= post.title %></td>
         <td><%= post.description %></td>
         <td><%= link_to 'Show', post %></td>
