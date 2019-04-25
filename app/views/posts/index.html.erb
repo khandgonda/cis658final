@@ -67,7 +67,7 @@ div > a:link, div > a:visited,div > a:hover, div > a:active   {
 
   <tbody>
     <% @posts.each do |post| %>
-      <tr id='<%= item.id %>'>
+      <tr>
         <td><%= post.title %></td>
         <td><%= post.description %></td>
         <td><%= link_to 'Show', post %></td>
