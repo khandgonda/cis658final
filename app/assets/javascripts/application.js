@@ -26,7 +26,9 @@ $(document).ready(function() {
       $.ajax({
         url: "/posts/" + this.parentElement.id,
         type: "DELETE",
-        success: function(r) {}
+        success: function(r) {
+          window.location.href = "/posts";
+        }
       });
     }
   });
